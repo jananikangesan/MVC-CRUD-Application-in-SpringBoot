@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta  http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css"/>
+</head>
+<body>
+
+<div>
+    <div th:fragment="header">
+        <nav>
+            <div>
+                <div>
+                    <a href="#" th:href="@{/}">Home</a>
+                    <ul>
+                        <li><a th:href="@{/products}">Products</a></li>
+                        <li><a th:href="@{/products/add}"> Create Product</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <div>
+                <div>
+                    <h2>Spring MVC Application</h2>
+                </div>
+            </div>
+            <div>
+                <img src="">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
