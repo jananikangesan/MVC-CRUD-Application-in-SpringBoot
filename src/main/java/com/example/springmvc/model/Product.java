@@ -1,16 +1,10 @@
 package com.example.springmvc.model;
-
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
-
 @Entity
+@Table
 public class Product {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO,generator ="system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid2")
