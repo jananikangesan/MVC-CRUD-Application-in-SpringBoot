@@ -45,4 +45,11 @@ public class ProductController {
         model.addAttribute("product",productRepository.findById(id));
         return "edit";
     }
+
+    @RequestMapping(path="/products/delete/{id}",method=RequestMethod.GET)
+    public String deleteProduct(@PathVariable(name="id") String id){
+        Product foundProduct=productRepository.findById(id).orElse(null);
+        productRepository.delete(foundProduct);
+        return "redirect:/products";
+    }
 }
