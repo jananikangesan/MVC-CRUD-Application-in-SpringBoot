@@ -32,4 +32,10 @@ public class ProductController {
         productRepository.save(product);
         return "redirect:/";
     }
+
+    @RequestMapping(path="/products",method=RequestMethod.GET)
+    public String getAllProducts(Model model){
+        model.addAttribute("products",productRepository.findAll());
+        return "products";
+    }
 }
